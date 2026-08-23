@@ -1,5 +1,7 @@
 name: PP image
 on:
+  push:
+    branches: ['pontempro/**']
   workflow_dispatch:
 permissions:
   contents: read
@@ -24,5 +26,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: ghcr.io/pontempro/twenty:pp-v2.32.0
+          build-args: |
+            APP_VERSION=v2.32.0-pp
           cache-from: type=gha
           cache-to: type=gha,mode=max
