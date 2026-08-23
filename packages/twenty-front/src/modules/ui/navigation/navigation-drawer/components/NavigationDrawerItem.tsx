@@ -300,7 +300,22 @@ export const NavigationDrawerItem = ({
   const handleExternalLinkClick = () => {
     handleMobileNavigation();
     if (isDefined(to)) {
-      window.open(to, '_blank', 'noopener,noreferrer');
+      // Pontem Pro: reuse one named tab per external host instead of
+      // spawning a new tab on every click. 'noopener'/'noreferrer' window
+      // features force a fresh browsing context, which defeats named-tab
+      // reuse, so the opener is severed manually instead (same tabnabbing
+      // protection; the initial about:blank is same-origin and writable).
+      let windowName = '_blank';
+      try {
+        windowName = `pp-${new URL(to).hostname}`;
+      } catch {
+        // unparseable URL: fall back to a fresh tab
+      }
+      const openedWindow = window.open(to, windowName);
+      if (openedWindow !== null) {
+        openedWindow.opener = null;
+        openedWindow.focus();
+      }
     }
   };
 
