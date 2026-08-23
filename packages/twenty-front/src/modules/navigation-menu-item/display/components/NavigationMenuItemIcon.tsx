@@ -97,6 +97,29 @@ export const NavigationMenuItemIcon = ({
   }
 
   if (navigationMenuItem.type === NavigationMenuItemType.LINK) {
+    // Pontem Pro: a LINK item with an explicitly configured icon renders it
+    // in a tinted tile instead of the target site's favicon.
+    const customLinkIcon = isDefined(navigationMenuItem.icon)
+      ? getIcon(navigationMenuItem.icon)
+      : undefined;
+    if (isDefined(customLinkIcon)) {
+      const linkColor = getNavigationMenuItemColor(navigationMenuItem);
+      const linkIconStyle = getIconTileColorShades(linkColor);
+      return (
+        <StyledTintedIconTileContainer
+          $backgroundColor={linkIconStyle.backgroundColor}
+          $borderColor={linkIconStyle.borderColor}
+        >
+          <Avatar
+            size="sm"
+            type="icon"
+            Icon={customLinkIcon}
+            iconColor={linkIconStyle.iconColor}
+            placeholder={navigationMenuItem.name ?? ''}
+          />
+        </StyledTintedIconTileContainer>
+      );
+    }
     const computedLink = getNavigationMenuItemComputedLink({
       item: navigationMenuItem,
       objectMetadataItems,
