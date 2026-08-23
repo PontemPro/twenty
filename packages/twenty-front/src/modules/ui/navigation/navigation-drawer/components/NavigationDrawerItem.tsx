@@ -10,7 +10,7 @@ import { useSetAtomState } from '@/ui/utilities/state/jotai/hooks/useSetAtomStat
 import { styled } from '@linaria/react';
 import { t } from '@lingui/core/macro';
 import { isNonEmptyString } from '@sniptt/guards';
-import { type JSX, type ReactNode, useContext } from 'react';
+import { type JSX, type ReactNode, useContext, type MouseEvent as ReactMouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { isDefined } from 'twenty-shared/utils';
 import { Pill, TintedIconTile } from 'twenty-ui/data-display';
@@ -297,25 +297,33 @@ export const NavigationDrawerItem = ({
     isDefined(to) && (to.startsWith('http://') || to.startsWith('https://'));
   const isInternalLink = isDefined(to) && !isExternalLink;
 
-  const handleExternalLinkClick = () => {
+  // Pontem Pro: one named tab per external host - later clicks jump to the
+  // already-open tab instead of spawning a new one. Named reuse depends on
+  // the opener relationship, so no 'noopener'/'noreferrer' and no opener
+  // severing here: these links are workspace-curated first-party tools.
+  const externalWindowName = (() => {
+    if (!isExternalLink || !isDefined(to)) {
+      return undefined;
+    }
+    try {
+      return `pp-${new URL(to).hostname}`;
+    } catch {
+      return '_blank';
+    }
+  })();
+
+  const handleExternalLinkClick = (event?: ReactMouseEvent<HTMLElement>) => {
+    // Modifier clicks fall through to the anchor default, which already
+    // targets the named tab; running the handler too would navigate twice.
+    if (
+      isDefined(event) &&
+      (event.metaKey || event.ctrlKey || event.shiftKey)
+    ) {
+      return;
+    }
     handleMobileNavigation();
     if (isDefined(to)) {
-      // Pontem Pro: reuse one named tab per external host instead of
-      // spawning a new tab on every click. 'noopener'/'noreferrer' window
-      // features force a fresh browsing context, which defeats named-tab
-      // reuse, so the opener is severed manually instead (same tabnabbing
-      // protection; the initial about:blank is same-origin and writable).
-      let windowName = '_blank';
-      try {
-        windowName = `pp-${new URL(to).hostname}`;
-      } catch {
-        // unparseable URL: fall back to a fresh tab
-      }
-      const openedWindow = window.open(to, windowName);
-      if (openedWindow !== null) {
-        openedWindow.opener = null;
-        openedWindow.focus();
-      }
+      window.open(to, externalWindowName ?? '_blank')?.focus();
     }
   };
 
@@ -357,8 +365,7 @@ export const NavigationDrawerItem = ({
         role={!to && isDefined(rightOptions) ? 'button' : undefined}
         to={isInternalLink ? to : undefined}
         href={isExternalLink ? to : undefined}
-        target={isExternalLink ? '_blank' : undefined}
-        rel={isExternalLink ? 'noopener noreferrer' : undefined}
+        target={isExternalLink ? (externalWindowName ?? '_blank') : undefined}
         draggable={isInternalLink ? false : undefined}
       >
         <StyledItemElementsContainer>
