@@ -23,6 +23,7 @@ jobs:
         with:
           context: .
           file: packages/twenty-docker/twenty/Dockerfile
+          target: twenty
           platforms: linux/amd64
           push: true
           tags: ghcr.io/pontempro/twenty:pp-v2.32.0
