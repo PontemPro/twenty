@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--t-font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--t-background-tertiary);
@@ -66,7 +66,7 @@ form {
 
 /* Pontem Pro: petrol navigation drawer (light mode only) */
 .light [data-click-outside-id='navigation-drawer'] {
-  background: linear-gradient(180deg, #114f5c 0%, #0d3f49 100%);
+  background: linear-gradient(170deg, #1a6a7a 0%, #114f5c 48%, #093540 100%);
 
   /* text */
   --t-font-color-primary: rgba(255, 255, 255, 0.96);
