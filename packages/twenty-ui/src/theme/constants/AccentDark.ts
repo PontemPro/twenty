@@ -1,25 +1,20 @@
-// FULL REPLACEMENT -> packages/twenty-ui/src/theme/constants/AccentDark.ts
-// Pontem Pro: dark accent family = dark-adapted Pontem Coral.
-// Everything else in dark mode stays Twenty default.
-import { PONTEM_CORAL_DARK } from '@ui/theme/constants/PontemColors';
-
 export const ACCENT_DARK = {
-  primary: PONTEM_CORAL_DARK.coral5,
-  secondary: PONTEM_CORAL_DARK.coral5,
-  tertiary: PONTEM_CORAL_DARK.coral3,
-  quaternary: PONTEM_CORAL_DARK.coral2,
-  accent3570: PONTEM_CORAL_DARK.coral8,
-  accent4060: PONTEM_CORAL_DARK.coral8,
-  accent1: PONTEM_CORAL_DARK.coral1,
-  accent2: PONTEM_CORAL_DARK.coral2,
-  accent3: PONTEM_CORAL_DARK.coral3,
-  accent4: PONTEM_CORAL_DARK.coral4,
-  accent5: PONTEM_CORAL_DARK.coral5,
-  accent6: PONTEM_CORAL_DARK.coral6,
-  accent7: PONTEM_CORAL_DARK.coral7,
-  accent8: PONTEM_CORAL_DARK.coral8,
-  accent9: PONTEM_CORAL_DARK.coral9,
-  accent10: PONTEM_CORAL_DARK.coral10,
-  accent11: PONTEM_CORAL_DARK.coral11,
-  accent12: PONTEM_CORAL_DARK.coral12,
+  primary: 'color(display-p3 0.332 0.168 0.129)',
+  secondary: 'color(display-p3 0.332 0.168 0.129)',
+  tertiary: 'color(display-p3 0.212 0.119 0.093)',
+  quaternary: 'color(display-p3 0.134 0.096 0.088)',
+  accent3570: 'color(display-p3 0.63 0.348 0.279)',
+  accent4060: 'color(display-p3 0.63 0.348 0.279)',
+  accent1: 'color(display-p3 0.105 0.083 0.079)',
+  accent2: 'color(display-p3 0.134 0.096 0.088)',
+  accent3: 'color(display-p3 0.212 0.119 0.093)',
+  accent4: 'color(display-p3 0.276 0.135 0.104)',
+  accent5: 'color(display-p3 0.332 0.168 0.129)',
+  accent6: 'color(display-p3 0.413 0.221 0.174)',
+  accent7: 'color(display-p3 0.505 0.278 0.223)',
+  accent8: 'color(display-p3 0.63 0.348 0.279)',
+  accent9: 'color(display-p3 0.68 0.305 0.223)',
+  accent10: 'color(display-p3 0.639 0.281 0.203)',
+  accent11: 'color(display-p3 0.841 0.554 0.48)',
+  accent12: 'color(display-p3 0.947 0.84 0.809)',
 };

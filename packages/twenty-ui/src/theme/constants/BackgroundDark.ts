@@ -3,7 +3,6 @@ import * as RadixColors from '@radix-ui/colors';
 import { COLOR_DARK } from '@ui/theme/constants/ColorsDark';
 import { GRAY_SCALE_DARK } from './GrayScaleDark';
 import { TRANSPARENT_COLORS_DARK } from './TransparentColorsDark';
-import { PONTEM_CORAL_TRANSPARENT } from '@ui/theme/constants/PontemColors';
 
 export const BACKGROUND_DARK = {
   noisy: 'var(--t-background-noisy)',
@@ -22,7 +21,7 @@ export const BACKGROUND_DARK = {
     light: TRANSPARENT_COLORS_DARK.gray2,
     lighter: TRANSPARENT_COLORS_DARK.gray1,
     danger: TRANSPARENT_COLORS_DARK.red3,
-    blue: PONTEM_CORAL_TRANSPARENT.selectionDark,
+    blue: '#f0694f57',
     orange: TRANSPARENT_COLORS_DARK.orange4,
     success: TRANSPARENT_COLORS_DARK.green4,
   },
