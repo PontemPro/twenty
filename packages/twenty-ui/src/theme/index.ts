@@ -40,7 +40,13 @@ export { MAIN_COLOR_NAMES } from './constants/MainColorNames';
 export { MAIN_COLORS_DARK } from './constants/MainColorsDark';
 export { MAIN_COLORS_LIGHT } from './constants/MainColorsLight';
 export { MODAL } from './constants/Modal';
-export { PONTEM_CORAL_LIGHT, PONTEM_CORAL_DARK, PONTEM_PETROL, PONTEM_CORAL_TRANSPARENT } from './constants/PontemColors';
+export {
+  PONTEM_CORAL_BRAND,
+  PONTEM_CORAL_DARK,
+  PONTEM_CORAL_LIGHT,
+  PONTEM_CORAL_TRANSPARENT,
+  PONTEM_PETROL,
+} from './constants/PontemColors';
 export { RGBA } from './constants/Rgba';
 export { SECONDARY_COLORS_DARK } from './constants/SecondaryColorsDark';
 export { SECONDARY_COLORS_LIGHT } from './constants/SecondaryColorsLight';
