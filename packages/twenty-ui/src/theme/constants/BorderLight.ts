@@ -6,8 +6,8 @@ import { TRANSPARENT_COLORS_LIGHT } from './TransparentColorsLight';
 export const BORDER_LIGHT = {
   color: {
     strong: GRAY_SCALE_LIGHT.gray6,
-    medium: GRAY_SCALE_LIGHT.gray5,
-    light: GRAY_SCALE_LIGHT.gray4,
+    medium: '#d6e2e2',
+    light: '#e3ecec',
     secondaryInverted: GRAY_SCALE_LIGHT.gray11,
     inverted: GRAY_SCALE_LIGHT.gray12,
     danger: COLOR_LIGHT.red5,
