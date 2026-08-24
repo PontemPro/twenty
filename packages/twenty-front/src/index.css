@@ -72,3 +72,16 @@ form {
 .dark a[href^='mailto:'] {
   color: #e38976;
 }
+
+/* Pontem Pro: the record-index header CTA ("+ New Person") renders neutral,
+   as in the approved design reference. Scoped to the page action container;
+   other primary CTAs keep the action-coral accent per the written spec.
+   Button reads all colors through its --btn-* custom properties. */
+[data-click-outside-id='page-action-container']
+  button[data-variant='primary'][data-accent='blue'] {
+  --btn-bg: var(--t-background-primary);
+  --btn-color: var(--t-font-color-primary);
+  --btn-border-color: var(--t-border-color-medium);
+  --btn-hover-bg: var(--t-background-secondary);
+  --btn-active-bg: var(--t-background-tertiary);
+}
