@@ -2,7 +2,6 @@ import { COLOR_DARK } from '@ui/theme/constants/ColorsDark';
 import { BORDER_COMMON } from './BorderCommon';
 import { GRAY_SCALE_DARK } from './GrayScaleDark';
 import { TRANSPARENT_COLORS_DARK } from './TransparentColorsDark';
-import { PONTEM_CORAL_DARK } from '@ui/theme/constants/PontemColors';
 
 export const BORDER_DARK = {
   color: {
@@ -12,7 +11,7 @@ export const BORDER_DARK = {
     secondaryInverted: GRAY_SCALE_DARK.gray11,
     inverted: GRAY_SCALE_DARK.gray12,
     danger: COLOR_DARK.red5,
-    blue: PONTEM_CORAL_DARK.coral7,
+    blue: 'color(display-p3 0.505 0.278 0.223)',
     transparentStrong: TRANSPARENT_COLORS_DARK.gray4,
   },
   ...BORDER_COMMON,

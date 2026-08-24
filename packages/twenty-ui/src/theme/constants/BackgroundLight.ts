@@ -3,7 +3,6 @@ import * as RadixColors from '@radix-ui/colors';
 import { COLOR_LIGHT } from '@ui/theme/constants/ColorsLight';
 import { GRAY_SCALE_LIGHT } from './GrayScaleLight';
 import { TRANSPARENT_COLORS_LIGHT } from './TransparentColorsLight';
-import { PONTEM_CORAL_TRANSPARENT, PONTEM_PETROL } from '@ui/theme/constants/PontemColors';
 
 export const BACKGROUND_LIGHT = {
   noisy: 'var(--t-background-noisy)',
@@ -22,15 +21,15 @@ export const BACKGROUND_LIGHT = {
     light: TRANSPARENT_COLORS_LIGHT.gray2,
     lighter: TRANSPARENT_COLORS_LIGHT.gray1,
     danger: TRANSPARENT_COLORS_LIGHT.red3,
-    blue: PONTEM_CORAL_TRANSPARENT.selectionLight,
+    blue: '#e05a4112',
     orange: TRANSPARENT_COLORS_LIGHT.orange3,
     success: TRANSPARENT_COLORS_LIGHT.green3,
   },
   overlayPrimary: TRANSPARENT_COLORS_LIGHT.gray11,
   overlaySecondary: TRANSPARENT_COLORS_LIGHT.gray9,
   overlayTertiary: TRANSPARENT_COLORS_LIGHT.gray4,
-  radialGradient: `radial-gradient(50% 62.62% at 50% 0%, ${PONTEM_PETROL.petrol500} 0%, ${PONTEM_PETROL.petrol600} 100%)`,
-  radialGradientHover: `radial-gradient(76.32% 95.59% at 50% 0%, ${PONTEM_PETROL.petrol600} 0%, ${PONTEM_PETROL.petrol700} 100%)`,
-  primaryInverted: PONTEM_PETROL.petrol600,
-  primaryInvertedHover: PONTEM_PETROL.petrol700,
+  radialGradient: 'radial-gradient(50% 62.62% at 50% 0%, color(display-p3 0.204 0.364 0.417) 0%, color(display-p3 0.145 0.305 0.354) 100%)',
+  radialGradientHover: 'radial-gradient(76.32% 95.59% at 50% 0%, color(display-p3 0.145 0.305 0.354) 0%, color(display-p3 0.113 0.243 0.281) 100%)',
+  primaryInverted: 'color(display-p3 0.145 0.305 0.354)',
+  primaryInvertedHover: 'color(display-p3 0.113 0.243 0.281)',
 };

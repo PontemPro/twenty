@@ -1,26 +1,20 @@
-// FULL REPLACEMENT -> packages/twenty-ui/src/theme/constants/AccentLight.ts
-// Pontem Pro: accent family switched from Radix indigo to Pontem Coral.
-// Key mapping (primary/secondary=5, tertiary=3, quaternary=2, 3570/4060=8)
-// mirrors upstream exactly, so all consumers keep their relative weights.
-import { PONTEM_CORAL_LIGHT } from '@ui/theme/constants/PontemColors';
-
 export const ACCENT_LIGHT = {
-  primary: PONTEM_CORAL_LIGHT.coral5,
-  secondary: PONTEM_CORAL_LIGHT.coral5,
-  tertiary: PONTEM_CORAL_LIGHT.coral3,
-  quaternary: PONTEM_CORAL_LIGHT.coral2,
-  accent3570: PONTEM_CORAL_LIGHT.coral8,
-  accent4060: PONTEM_CORAL_LIGHT.coral8,
-  accent1: PONTEM_CORAL_LIGHT.coral1,
-  accent2: PONTEM_CORAL_LIGHT.coral2,
-  accent3: PONTEM_CORAL_LIGHT.coral3,
-  accent4: PONTEM_CORAL_LIGHT.coral4,
-  accent5: PONTEM_CORAL_LIGHT.coral5,
-  accent6: PONTEM_CORAL_LIGHT.coral6,
-  accent7: PONTEM_CORAL_LIGHT.coral7,
-  accent8: PONTEM_CORAL_LIGHT.coral8,
-  accent9: PONTEM_CORAL_LIGHT.coral9,
-  accent10: PONTEM_CORAL_LIGHT.coral10,
-  accent11: PONTEM_CORAL_LIGHT.coral11,
-  accent12: PONTEM_CORAL_LIGHT.coral12,
+  primary: 'color(display-p3 0.961 0.822 0.784)',
+  secondary: 'color(display-p3 0.961 0.822 0.784)',
+  tertiary: 'color(display-p3 0.989 0.939 0.928)',
+  quaternary: 'color(display-p3 0.995 0.97 0.962)',
+  accent3570: 'color(display-p3 0.856 0.566 0.492)',
+  accent4060: 'color(display-p3 0.856 0.566 0.492)',
+  accent1: 'color(display-p3 0.998 0.989 0.988)',
+  accent2: 'color(display-p3 0.995 0.97 0.962)',
+  accent3: 'color(display-p3 0.989 0.939 0.928)',
+  accent4: 'color(display-p3 0.979 0.875 0.845)',
+  accent5: 'color(display-p3 0.961 0.822 0.784)',
+  accent6: 'color(display-p3 0.934 0.754 0.707)',
+  accent7: 'color(display-p3 0.896 0.671 0.609)',
+  accent8: 'color(display-p3 0.856 0.566 0.492)',
+  accent9: 'color(display-p3 0.68 0.305 0.223)',
+  accent10: 'color(display-p3 0.639 0.281 0.203)',
+  accent11: 'color(display-p3 0.592 0.262 0.189)',
+  accent12: 'color(display-p3 0.298 0.144 0.109)',
 };
