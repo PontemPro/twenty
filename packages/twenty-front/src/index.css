@@ -63,3 +63,12 @@ form {
 .grecaptcha-badge {
   visibility: hidden !important;
 }
+
+/* Pontem Pro: email chips carry accent text (design reference parity).
+   Semantic selector, no component edits; phones stay neutral per the mock. */
+.light a[href^='mailto:'] {
+  color: #a33c29;
+}
+.dark a[href^='mailto:'] {
+  color: #e38976;
+}
