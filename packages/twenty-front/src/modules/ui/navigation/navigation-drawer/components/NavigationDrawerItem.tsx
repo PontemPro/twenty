@@ -134,6 +134,17 @@ const StyledItem = styled.button<StyledItemProps>`
         : themeCssVariables.font.color.primary};
   }
 
+  /* Pontem Pro design reference: the active nav item renders as a white
+     card with a brand-coral ring (light mode only - dark keeps stock). */
+  .light &[data-active='true'],
+  .light &[data-active='true']:hover {
+    background: ${themeCssVariables.background.primary};
+    border-color: #e05a41;
+    box-shadow:
+      inset 0 0 0 0.5px #e05a41,
+      0 1px 2px rgba(0, 60, 70, 0.06);
+  }
+
   &:hover .keyboard-shortcuts {
     visibility: visible;
   }
@@ -353,6 +364,7 @@ export const NavigationDrawerItem = ({
         onClick={handleMouseDownNavigationClickClick}
         onMouseDown={handleMouseDown}
         active={active}
+        data-active={active === true ? 'true' : undefined}
         aria-current={isDefined(to) && active ? 'page' : undefined}
         isSoon={isSoon}
         variant={variant}
