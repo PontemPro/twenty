@@ -13,7 +13,7 @@ import { isNonEmptyString } from '@sniptt/guards';
 import { type JSX, type ReactNode, useContext, type MouseEvent as ReactMouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { isDefined } from 'twenty-shared/utils';
-import { Pill, getIconTileColorShades } from 'twenty-ui/data-display';
+import { Pill, getBareIconStrokeColor } from 'twenty-ui/data-display';
 import { type IconComponent, type TablerIconsProps } from 'twenty-ui/icon';
 import {
   AppTooltip,
@@ -90,7 +90,7 @@ const StyledItem = styled.button<StyledItemProps>`
       : '1px solid transparent'};
   border-radius: ${themeCssVariables.border.radius.md};
   box-sizing: border-box;
-  color: ${({ active, isSoon, variant }) => {
+  color: ${({ active, isSoon, variant, indentationLevel }) => {
     if (variant === 'tertiary') {
       return themeCssVariables.font.color.tertiary;
     }
@@ -100,7 +100,11 @@ const StyledItem = styled.button<StyledItemProps>`
     if (isSoon) {
       return themeCssVariables.font.color.light;
     }
-    return themeCssVariables.font.color.secondary;
+    /* Pontem Pro design reference: top-level items read dark (#333);
+       sub-items stay secondary. */
+    return indentationLevel === 2
+      ? themeCssVariables.font.color.secondary
+      : themeCssVariables.font.color.primary;
   }};
   cursor: ${({ isSoon, isDragging }) =>
     isDragging ? 'grabbing' : isSoon ? 'default' : 'pointer'};
@@ -398,7 +402,7 @@ export const NavigationDrawerItem = ({
                   }}
                   size={theme.icon.size.md}
                   stroke={theme.icon.stroke.md}
-                  color={getIconTileColorShades(iconColor).iconColor}
+                  color={getBareIconStrokeColor(iconColor)}
                 />
               </StyledIcon>
             ) : withIconBackground ? (

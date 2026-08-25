@@ -2,7 +2,7 @@ import { type EnrichedObjectMetadataItem } from '@/object-metadata/types/Enriche
 import { getObjectColorWithFallback } from '@/object-metadata/utils/getObjectColorWithFallback';
 import {
   TintedIconTile,
-  getIconTileColorShades,
+  getBareIconStrokeColor,
 } from 'twenty-ui/data-display';
 import { useIcons } from 'twenty-ui/icon';
 import { useTheme } from 'twenty-ui/theme-constants';
@@ -37,7 +37,7 @@ export const ObjectMetadataIcon = ({
       <Icon
         size={size ?? theme.icon.size.md}
         stroke={stroke ?? theme.icon.stroke.md}
-        color={getIconTileColorShades(color).iconColor}
+        color={getBareIconStrokeColor(color)}
       />
     );
   }

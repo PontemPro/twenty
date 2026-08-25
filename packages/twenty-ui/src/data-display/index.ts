@@ -46,3 +46,4 @@ export type { TintedIconTileProps } from './TintedIconTile/TintedIconTile';
 export { TintedIconTile } from './TintedIconTile/TintedIconTile';
 export type { IconTileColorShades } from './TintedIconTile/utils/getIconTileColorShades';
 export { getIconTileColorShades } from './TintedIconTile/utils/getIconTileColorShades';
+export { getBareIconStrokeColor } from './TintedIconTile/utils/getBareIconStrokeColor';
