@@ -15,6 +15,12 @@ const StyledHeaderCell = styled.div<{
       : 'none'};
   border-right: 1px solid ${themeCssVariables.border.color.light};
 
+  /* Pontem Pro design reference: neutral header-band lines in light mode. */
+  .light & {
+    border-bottom-color: #f1f1f1;
+    border-right-color: #f4f4f4;
+  }
+
   color: ${themeCssVariables.font.color.tertiary};
 
   cursor: ${({ isResizing, isReadOnly }) =>

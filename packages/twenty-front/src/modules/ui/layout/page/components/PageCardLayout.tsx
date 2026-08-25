@@ -29,6 +29,7 @@ const StyledMainCardWrapper = styled.div`
   box-sizing: border-box;
   display: flex;
   flex: 1 1 0;
+  flex-direction: column;
   margin-left: -3px;
   min-width: 0;
   padding-left: 4px;
@@ -151,13 +152,15 @@ export const PageCardLayout = ({
   return (
     <StyledRoot data-page-surface="main">
       <StyledMainCardWrapper>
+        {/* Pontem Pro design reference: the header floats above the card on
+            the frame; only the secondary bar and body live inside the card. */}
+        <StyledPrintHidden>{header}</StyledPrintHidden>
         <StyledCard>
           {shouldShowInformationBanner && (
             <StyledPrintHidden>
               <InformationBannerWrapper />
             </StyledPrintHidden>
           )}
-          <StyledPrintHidden>{header}</StyledPrintHidden>
           <StyledPrintHidden>{secondaryBar}</StyledPrintHidden>
           {body}
         </StyledCard>
