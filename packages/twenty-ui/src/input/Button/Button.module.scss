@@ -108,16 +108,18 @@ $gray-scale-light-gray1: color(display-p3 1 1 1);
 // default accent only shows its focus border when enabled, while blue and
 // danger keep the focus border even when disabled.
 $primary-accents: (
+  // Pontem Pro design reference: the standard CTA is a solid white button
+  // with a visible border and primary text, not a ghost button.
   'default': (
-    bg: var(--t-background-transparent-lighter),
+    bg: var(--t-background-primary),
     bg-disabled: var(--t-background-transparent-lighter),
-    border: var(--t-background-transparent-light),
+    border: var(--t-border-color-medium),
     border-focus: var(--t-color-blue),
     focus-needs-enabled: true,
     shadow-focus: var(--t-accent-tertiary),
-    color: var(--t-font-color-secondary),
+    color: var(--t-font-color-primary),
     color-disabled: var(--t-font-color-extra-light),
-    hover: var(--t-background-tertiary),
+    hover: var(--t-background-secondary),
     active: var(--t-background-quaternary),
   ),
   'blue': (
@@ -189,6 +191,14 @@ $primary-accents: (
       --btn-border-color: #{map.get($tokens, border)};
     }
   }
+}
+
+// Pontem Pro design reference: in light mode the standard CTA border is the
+// exact reference value.
+:global(.light) .button[data-variant='primary'][data-accent='default']:not(
+    [data-inverted]
+  ) {
+  --btn-border-color: #e2e8e8;
 }
 
 // variant=primary, inverted: identical across accents except for the text
