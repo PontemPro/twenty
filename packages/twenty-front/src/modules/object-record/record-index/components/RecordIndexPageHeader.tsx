@@ -32,15 +32,18 @@ const StyledTitle = styled.div`
    actions; clicking it opens the command menu like the shortcut does. */
 const StyledCommandMenuHintChip = styled.button`
   background: ${themeCssVariables.background.primary};
-  border: 1px solid #e2e8e8;
+  border: 1px solid ${themeCssVariables.border.color.medium};
   border-radius: 5px;
   color: ${themeCssVariables.font.color.tertiary};
   cursor: pointer;
   font-family: inherit;
   font-size: 11px;
-  line-height: 1;
-  padding: 4px 6px;
+  padding: 2px 6px;
   white-space: nowrap;
+
+  .light & {
+    border-color: #e2e8e8;
+  }
 `;
 
 const StyledSelectedRecordsCount = styled.div`
