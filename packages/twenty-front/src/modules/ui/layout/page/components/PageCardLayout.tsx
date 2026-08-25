@@ -40,7 +40,9 @@ const StyledMainCardWrapper = styled.div`
 
   @media (max-width: ${MOBILE_VIEWPORT}px) {
     margin-left: 0;
+    padding-bottom: 0;
     padding-left: 0;
+    padding-right: 0;
   }
 
   @media print {
