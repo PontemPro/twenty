@@ -13,7 +13,7 @@ import { isNonEmptyString } from '@sniptt/guards';
 import { type JSX, type ReactNode, useContext, type MouseEvent as ReactMouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { isDefined } from 'twenty-shared/utils';
-import { Pill, TintedIconTile } from 'twenty-ui/data-display';
+import { Pill, getIconTileColorShades } from 'twenty-ui/data-display';
 import { type IconComponent, type TablerIconsProps } from 'twenty-ui/icon';
 import {
   AppTooltip,
@@ -389,8 +389,17 @@ export const NavigationDrawerItem = ({
 
           {Icon &&
             (isNonEmptyString(iconColor) ? (
+              // Pontem Pro design reference: colored items render a bare
+              // stroke icon in the color's icon shade, not a tinted tile.
               <StyledIcon>
-                <TintedIconTile Icon={Icon} color={iconColor} />
+                <Icon
+                  style={{
+                    minWidth: theme.icon.size.md,
+                  }}
+                  size={theme.icon.size.md}
+                  stroke={theme.icon.stroke.md}
+                  color={getIconTileColorShades(iconColor).iconColor}
+                />
               </StyledIcon>
             ) : withIconBackground ? (
               <StyledIcon>
