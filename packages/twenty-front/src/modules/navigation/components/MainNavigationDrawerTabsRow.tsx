@@ -35,9 +35,10 @@ const StyledRow = styled.div<{ isExpanded: boolean }>`
 
 const StyledTabsPill = styled.div`
   align-items: center;
-  background: ${themeCssVariables.background.secondary};
-  border: 1px solid ${themeCssVariables.border.color.medium};
-  border-radius: ${themeCssVariables.border.radius.pill};
+  background: ${themeCssVariables.background.primary};
+  /* Pontem Pro design reference: white controls, #e2e8e8 border, 10px radius. */
+  border: 1px solid #e2e8e8;
+  border-radius: 10px;
   box-sizing: border-box;
   corner-shape: round;
   display: flex;
@@ -90,9 +91,10 @@ const StyledNewChatIcon = styled.div`
 
 const StyledNewChatButtonWrapper = styled.div<{ isExpanded: boolean }>`
   align-items: center;
-  background: ${themeCssVariables.background.secondary};
-  border: 1px solid ${themeCssVariables.border.color.medium};
-  border-radius: ${themeCssVariables.border.radius.pill};
+  background: ${themeCssVariables.background.primary};
+  /* Pontem Pro design reference: white controls, #e2e8e8 border, 10px radius. */
+  border: 1px solid #e2e8e8;
+  border-radius: 10px;
   box-sizing: border-box;
   corner-shape: round;
   display: flex;

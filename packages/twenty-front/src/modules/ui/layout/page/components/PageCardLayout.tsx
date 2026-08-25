@@ -31,6 +31,10 @@ const StyledMainCardWrapper = styled.div`
   margin-left: -3px;
   min-width: 0;
   padding-left: 4px;
+  /* Pontem Pro design reference: the page card floats with a 12px gap to
+     the right and bottom edges of the frame. */
+  padding-bottom: 12px;
+  padding-right: 12px;
   width: 0;
 
   @media (max-width: ${MOBILE_VIEWPORT}px) {
@@ -50,10 +54,12 @@ const StyledMainCardWrapper = styled.div`
 // oxlint-disable-next-line twenty/no-hardcoded-colors
 const StyledCard = styled.div`
   background: ${themeCssVariables.background.primary};
-  border-radius: ${themeCssVariables.border.radius.lg} 0 0 0;
+  /* Pontem Pro design reference: 10px radius on all corners, light border
+     ring and a soft petrol shadow. */
+  border-radius: 10px;
   box-shadow:
-    -4px 0 4px 0 rgba(0, 0, 0, 0.006),
-    0 0 0 1px ${themeCssVariables.border.color.medium};
+    0 1px 3px rgba(0, 60, 70, 0.06),
+    0 0 0 1px ${themeCssVariables.border.color.light};
   box-sizing: border-box;
   display: flex;
   flex: 1;
@@ -64,7 +70,7 @@ const StyledCard = styled.div`
 
   .dark & {
     box-shadow:
-      -4px 0 4px 0 rgba(0, 0, 0, 0.03),
+      0 1px 3px rgba(0, 0, 0, 0.3),
       0 0 0 1px ${themeCssVariables.border.color.medium};
   }
 

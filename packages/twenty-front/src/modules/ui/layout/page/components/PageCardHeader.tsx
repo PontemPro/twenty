@@ -34,8 +34,9 @@ const StyledHeader = styled.div<{ centerTitle?: boolean }>`
     centerTitle
       ? 'minmax(0, 1fr) minmax(0, auto) minmax(0, 1fr)'
       : 'minmax(0, auto) minmax(min-content, 1fr)'};
-  min-height: ${SIDE_PANEL_TOP_BAR_HEIGHT}px;
-  padding: 0 ${themeCssVariables.spacing[3]};
+  /* Pontem Pro design reference: 44px header bar, 10px/4px side paddings. */
+  min-height: 44px;
+  padding: 0 ${themeCssVariables.spacing[1]} 0 10px;
   width: 100%;
 `;
 
