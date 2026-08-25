@@ -11,5 +11,7 @@ export const RecordIndexPageHeaderIcon = ({
     return null;
   }
 
-  return <ObjectMetadataIcon objectMetadataItem={objectMetadataItem} />;
+  return (
+    <ObjectMetadataIcon objectMetadataItem={objectMetadataItem} variant="bare" />
+  );
 };
