@@ -175,7 +175,7 @@ export const NavigationMenuItemIcon = ({
 
   const avatar = (
     <Avatar
-      size={iconStyle ? 'sm' : 'md'}
+      size="md"
       type={recordIdentifier?.avatarType ?? 'icon'}
       Icon={iconToUse}
       iconColor={iconColorToUse}
@@ -185,16 +185,7 @@ export const NavigationMenuItemIcon = ({
     />
   );
 
-  if (!iconStyle) {
-    return avatar;
-  }
-
-  return (
-    <StyledTintedIconTileContainer
-      $backgroundColor={iconStyle.backgroundColor}
-      $borderColor={iconStyle.borderColor}
-    >
-      {avatar}
-    </StyledTintedIconTileContainer>
-  );
+  // Pontem Pro design reference: object and view items render a bare
+  // colored stroke icon (no tinted tile), like the sidebar mockup.
+  return avatar;
 };

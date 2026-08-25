@@ -170,7 +170,10 @@ export const ObjectRecordShowPageBreadcrumb = ({
           }}
         >
           <StyledBreadcrumbPrefixObjectIcon>
-            <ObjectMetadataIcon objectMetadataItem={objectMetadataItem} />
+            <ObjectMetadataIcon
+              objectMetadataItem={objectMetadataItem}
+              variant="bare"
+            />
           </StyledBreadcrumbPrefixObjectIcon>
           {objectLabel}
           <span>{' / '}</span>
