@@ -17,6 +17,11 @@ export const StyledCell = styled.div<{
   border-bottom: 1px solid
     ${({ borderColor, hasBottomBorder, isDragging }) =>
       hasBottomBorder && !isDragging ? borderColor : 'transparent'};
+
+  .light &:not([data-no-row-line]) {
+    border-bottom-color: ${({ hasBottomBorder, isDragging }) =>
+      hasBottomBorder && !isDragging ? '#f6f6f6' : 'transparent'};
+  }
   border-right: ${({ borderColor, hasRightBorder }) =>
     hasRightBorder ? `1px solid ${borderColor}` : 'none'};
 
@@ -50,7 +55,11 @@ export const RecordTableCellStyleWrapper = ({
     ? theme.accent.quaternary
     : theme.background.primary;
 
-  const borderColor = theme.border.color.light;
+  /* Pontem Pro design reference: light mode uses the mockup's neutral grid
+     lines (#f4f4f4 verticals; rows get #f6f6f6 via the CSS override below);
+     dark mode keeps the theme token. */
+  const borderColor =
+    theme.name === 'dark' ? theme.border.color.light : '#f4f4f4';
 
   const fontColor = theme.font.color.primary;
 
