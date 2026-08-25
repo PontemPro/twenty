@@ -14,7 +14,9 @@ import { styled } from '@linaria/react';
 import { Outlet } from 'react-router-dom';
 import { themeCssVariables } from 'twenty-ui/theme-constants';
 const StyledLayout = styled.div`
-  background: ${themeCssVariables.grayScale.gray3};
+  /* Pontem Pro design reference: the app shell behind the sidebar and the
+     page card uses the petrol-tinted frame (#f5f9f9), not plain gray3. */
+  background: ${themeCssVariables.background.tertiary};
   display: flex;
   flex-direction: column;
   height: calc(100dvh / var(--t-zoom, 1));
