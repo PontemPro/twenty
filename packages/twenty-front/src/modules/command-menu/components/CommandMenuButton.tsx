@@ -44,7 +44,9 @@ export const CommandMenuButton = ({
       : undefined;
 
   const buttonAccent =
-    isPrimaryAction || command.isPrimaryCTA === true ? 'blue' : 'default';
+    // Pontem Pro design reference: the standard header CTA stays neutral
+    // (stock Twenty look); no accent fill even for the primary action.
+    'default' as const;
 
   return (
     <>

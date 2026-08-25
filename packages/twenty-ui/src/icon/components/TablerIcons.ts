@@ -77,7 +77,6 @@ export {
   IconChartLine,
   IconChartPie,
   IconCheck,
-  IconCheckbox,
   IconChevronDown,
   IconChevronLeft,
   IconChevronRight,
@@ -248,7 +247,6 @@ export {
   IconLayersLinked,
   IconLayout,
   IconLayoutDashboard,
-  IconLayoutGrid,
   IconLayoutKanban,
   IconLayoutList,
   IconLayoutNavbar,
@@ -292,7 +290,6 @@ export {
   IconNewSection,
   IconNorthStar,
   IconNoteOff,
-  IconNotes,
   IconNumber,
   IconNumber123,
   IconNumber9,
@@ -352,7 +349,6 @@ export {
   IconServer2,
   IconSettings,
   IconSettings2,
-  IconSettingsAutomation,
   IconSettingsBolt,
   IconShare,
   IconShield,
@@ -397,7 +393,6 @@ export {
   IconTable,
   IconTag,
   IconTags,
-  IconTarget,
   IconTargetArrow,
   IconTerminal,
   IconTestPipe,
@@ -418,7 +413,6 @@ export {
   IconUnderline,
   IconUnlink,
   IconUpload,
-  IconUser,
   IconUserCircle,
   IconUserCog,
   IconUserPin,
@@ -438,3 +432,15 @@ export {
 } from '@tabler/icons-react';
 
 export type { IconProps as TablerIconsProps } from '@tabler/icons-react';
+
+/* Pontem Pro design-reference glyphs replace the stock Tabler shapes for
+ * these names, everywhere they are imported by name. */
+export {
+  IconPPBuildingCommunity as IconBuildingCommunity,
+  IconPPUser as IconUser,
+  IconPPTarget as IconTarget,
+  IconPPCheckbox as IconCheckbox,
+  IconPPNotes as IconNotes,
+  IconPPLayoutGrid as IconLayoutGrid,
+  IconPPSettingsAutomation as IconSettingsAutomation,
+} from '@ui/icon/components/PontemIcons';

@@ -8370,3 +8370,25 @@ export const ALL_ICONS = {
   IconCancel,
   IconBadge2k,
 };
+
+/* Pontem Pro design-reference glyphs override the stock shapes in the
+ * string-keyed registry used by getIcon(). */
+import {
+  IconPPBuildingCommunity,
+  IconPPCheckbox,
+  IconPPLayoutGrid,
+  IconPPNotes,
+  IconPPSettingsAutomation,
+  IconPPTarget,
+  IconPPUser,
+} from '@ui/icon/components/PontemIcons';
+
+Object.assign(ALL_ICONS, {
+  IconBuildingCommunity: IconPPBuildingCommunity,
+  IconUser: IconPPUser,
+  IconTarget: IconPPTarget,
+  IconCheckbox: IconPPCheckbox,
+  IconNotes: IconPPNotes,
+  IconLayoutGrid: IconPPLayoutGrid,
+  IconSettingsAutomation: IconPPSettingsAutomation,
+});
