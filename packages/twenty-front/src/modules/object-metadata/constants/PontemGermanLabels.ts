@@ -104,6 +104,20 @@ export const PONTEM_GERMAN_FIELD_LABELS: Record<string, FieldGerman> = {
     label: '9. Klasse beglaubigt',
     options: { JA: 'Ja', NEIN: 'Nein' },
   },
+  letzterKontaktAm: { label: 'Letzter Kontakt am' },
+  kontaktKanal: {
+    label: 'Letzter Kontaktkanal',
+    options: {
+      TELEFON: 'Telefon',
+      WHATSAPP: 'WhatsApp',
+      EMAIL: 'E-Mail',
+      SMS: 'SMS',
+      PERSOENLICH: 'Persönlich',
+    },
+  },
+  kontaktVersuche: { label: 'Kontaktversuche' },
+  kontaktiertVon: { label: 'Kontaktiert von' },
+  leadsContacted: { label: 'Kontaktierte Leads' },
   // Person
   sprache: {
     label: 'Sprache',
