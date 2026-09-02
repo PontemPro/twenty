@@ -18,6 +18,10 @@ export const PONTEM_GERMAN_OBJECT_LABELS: Record<
     labelSingular: 'Ansprechpartner',
     labelPlural: 'Ansprechpartner',
   },
+  aktivitaet: {
+    labelSingular: 'Aktivität',
+    labelPlural: 'Aktivitäten',
+  },
 };
 
 export const PONTEM_GERMAN_FIELD_LABELS: Record<string, FieldGerman> = {
@@ -158,6 +162,28 @@ export const PONTEM_GERMAN_FIELD_LABELS: Record<string, FieldGerman> = {
   telefone: { label: 'Telefon' },
   emailAdressen: { label: 'E-Mail' },
   ansprechpartner: { label: 'Ansprechpartner' },
+  // Activity (aktivitaet) — one contact attempt on a lead
+  typ: {
+    label: 'Typ',
+    options: {
+      ANRUF: 'Anruf',
+      WHATSAPP: 'WhatsApp',
+      EMAIL: 'E-Mail',
+      TERMIN: 'Termin',
+    },
+  },
+  ergebnis: {
+    label: 'Ergebnis',
+    options: {
+      ERREICHT: 'Erreicht',
+      NICHT_ERREICHT: 'Nicht erreicht',
+      NUMMER_UNGUELTIG: 'Nummer ungültig',
+    },
+  },
+  zeitpunkt: { label: 'Zeitpunkt' },
+  notiz: { label: 'Notiz' },
+  lead: { label: 'Lead' },
+  aktivitaeten: { label: 'Aktivitäten' },
   // Contact Person (ansprechpartner)
   funktion: { label: 'Position' },
   hinweis: { label: 'Hinweis' },
