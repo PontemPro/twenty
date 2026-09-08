@@ -189,6 +189,20 @@ export const PONTEM_GERMAN_FIELD_LABELS: Record<string, FieldGerman> = {
   // Lead contact mirror (copied from the Person by the rollup cron)
   telefon: { label: 'Telefon' },
   email: { label: 'E-Mail' },
+  // Lead address
+  plz: { label: 'PLZ' },
+  strasse: { label: 'Straße und Hausnummer' },
+  bundesland: {
+    label: 'Bundesland',
+    options: {
+      BADEN_WUERTTEMBERG: 'Baden-Württemberg', BAYERN: 'Bayern', BERLIN: 'Berlin',
+      BRANDENBURG: 'Brandenburg', BREMEN: 'Bremen', HAMBURG: 'Hamburg', HESSEN: 'Hessen',
+      MECKLENBURG_VORPOMMERN: 'Mecklenburg-Vorpommern', NIEDERSACHSEN: 'Niedersachsen',
+      NORDRHEIN_WESTFALEN: 'Nordrhein-Westfalen', RHEINLAND_PFALZ: 'Rheinland-Pfalz',
+      SAARLAND: 'Saarland', SACHSEN: 'Sachsen', SACHSEN_ANHALT: 'Sachsen-Anhalt',
+      SCHLESWIG_HOLSTEIN: 'Schleswig-Holstein', THUERINGEN: 'Thüringen',
+    },
+  },
   // Contact Person (ansprechpartner)
   funktion: { label: 'Position' },
   hinweis: { label: 'Hinweis' },
