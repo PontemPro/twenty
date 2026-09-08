@@ -186,6 +186,9 @@ export const PONTEM_GERMAN_FIELD_LABELS: Record<string, FieldGerman> = {
   notiz: { label: 'Notiz' },
   lead: { label: 'Lead' },
   aktivitaeten: { label: 'Aktivitäten' },
+  // Lead contact mirror (copied from the Person by the rollup cron)
+  telefon: { label: 'Telefon' },
+  email: { label: 'E-Mail' },
   // Contact Person (ansprechpartner)
   funktion: { label: 'Position' },
   hinweis: { label: 'Hinweis' },
