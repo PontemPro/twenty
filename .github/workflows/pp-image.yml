@@ -26,8 +26,8 @@ jobs:
           target: twenty
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/pontempro/twenty:pp-v2.32.0
+          tags: ghcr.io/pontempro/twenty:pp-v2.38.1
           build-args: |
-            APP_VERSION=v2.32.0-pp
+            APP_VERSION=v2.38.1-pp
           cache-from: type=gha
           cache-to: type=gha,mode=max
