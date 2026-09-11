@@ -189,6 +189,20 @@ export const PONTEM_GERMAN_FIELD_LABELS: Record<string, FieldGerman> = {
   // Lead contact mirror (copied from the Person by the rollup cron)
   telefon: { label: 'Telefon' },
   email: { label: 'E-Mail' },
+  // Offer sending (tools/crm_send_offer.py)
+  angebot: {
+    label: 'Angebot',
+    options: {
+      SENDEN_BWSG_T: 'BWS-G Teilzeit senden',
+      SENDEN_INBES_EC: 'InBeS Einzelcoaching senden',
+      GESENDET: 'Gesendet',
+      FEHLER: 'Fehler',
+    },
+  },
+  angebotsnummer: { label: 'Angebotsnummer' },
+  angebotGesendetAm: { label: 'Angebot gesendet am' },
+  angebotVariante: { label: 'Angebot Variante' },
+  stadt: { label: 'Stadt' },
   // Lead address
   plz: { label: 'PLZ' },
   strasse: { label: 'Straße und Hausnummer' },
