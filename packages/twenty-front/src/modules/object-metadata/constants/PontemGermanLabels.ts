@@ -22,6 +22,10 @@ export const PONTEM_GERMAN_OBJECT_LABELS: Record<
     labelSingular: 'Aktivität',
     labelPlural: 'Aktivitäten',
   },
+  zuweisung: {
+    labelSingular: 'Zuweisung',
+    labelPlural: 'Warteliste',
+  },
 };
 
 export const PONTEM_GERMAN_FIELD_LABELS: Record<string, FieldGerman> = {
@@ -38,6 +42,12 @@ export const PONTEM_GERMAN_FIELD_LABELS: Record<string, FieldGerman> = {
       BEWILLIGT: 'Bewilligt',
       KURSSTART_ERREICHT: 'Kursstart erreicht',
       VERLOREN: 'Verloren',
+      // Waitlist (zuweisung) stages; NEU and BEWILLIGT are shared with leads
+      ERREICHT: 'Erreicht',
+      BERATUNG: 'Beratung erfolgt',
+      WARTET_AUF_BEWILLIGUNG: 'Wartet auf Bewilligung',
+      KURSSTART: 'Kurs gestartet',
+      ABGESAGT: 'Abgesagt',
     },
   },
   foerderinstrument: { label: 'Förderinstrument' },
@@ -221,6 +231,26 @@ export const PONTEM_GERMAN_FIELD_LABELS: Record<string, FieldGerman> = {
   funktion: { label: 'Position' },
   hinweis: { label: 'Hinweis' },
   firma: { label: 'Firma' },
+  // Waitlist (zuweisung): Jobcenter referrals, tools/crm_waitlist_schema.py
+  kundennummer: { label: 'Kundennummer (KD-Nr.)' },
+  modul: { label: 'Modul' },
+  gruppe: { label: 'Gruppe' },
+  beginn: { label: 'Beginn' },
+  ende: { label: 'Ende' },
+  teilnehmerTyp: {
+    label: 'Teilnehmer-Typ',
+    options: { NEU_TN: 'Neu-TN', WIEDERHOLER: 'Wiederholer' },
+  },
+  vertrag: { label: 'Vertrag unterschrieben' },
+  jobcenter: { label: 'Jobcenter' },
+  sachbearbeiter: { label: 'Sachbearbeiter/in' },
+  // inverse relations named after the "Referrals" label on company,
+  // ansprechpartner, person and workspaceMember
+  referrals: { label: 'Zuweisungen' },
+  // activity -> referral, and the activity list on leads and referrals
+  zuweisung: { label: 'Zuweisung' },
+  activities: { label: 'Aktivitäten' },
+  erpId: { label: 'ERP-ID' },
 };
 
 export const isPontemGermanLocale = (
