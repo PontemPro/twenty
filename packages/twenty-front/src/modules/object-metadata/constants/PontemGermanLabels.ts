@@ -47,6 +47,7 @@ export const PONTEM_GERMAN_FIELD_LABELS: Record<string, FieldGerman> = {
       BERATUNG: 'Beratung erfolgt',
       WARTET_AUF_BEWILLIGUNG: 'Wartet auf Bewilligung',
       KURSSTART: 'Kurs gestartet',
+      ABGELEHNT_JOBCENTER: 'Abgelehnt vom Jobcenter',
       ABGESAGT: 'Abgesagt',
     },
   },
